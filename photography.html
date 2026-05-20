@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography — Jason</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Masonry-style photo grid */
+    .photo-grid {
+      columns: 3;
+      column-gap: 1px;
+      background: var(--border);
+    }
+    .photo-grid .photo-item {
+      break-inside: avoid;
+      margin-bottom: 1px;
+      background: var(--bg);
+      overflow: hidden;
+      position: relative;
+    }
+    .photo-item .photo-slot {
+      aspect-ratio: unset;
+      min-height: 180px;
+      border: none;
+      border-radius: 0;
+    }
+    .photo-item:nth-child(3n+1) .photo-slot { min-height: 260px; }
+    .photo-item:nth-child(5n+2) .photo-slot { min-height: 320px; }
+    .photo-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(14,15,12,0.85));
+      padding: 2rem 1rem 1rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .photo-item:hover .photo-caption { opacity: 1; }
+    .photo-caption span {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+    @media (max-width: 768px) {
+      .photo-grid { columns: 2; }
+    }
+    @media (max-width: 480px) {
+      .photo-grid { columns: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="nav-logo">Jason</span>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="photography.html" class="active">Photography</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- Page Header -->
+    <section style="padding: 5rem 2.5rem 2rem; border-bottom: 1px solid var(--border); animation: fadeUp 0.8s ease both;">
+      <p class="hero-label">Photography</p>
+      <h1 style="font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 300; color: var(--white); line-height: 1.05;">
+        Through<br><em style="font-style:italic; color: var(--accent);">the lens</em>
+      </h1>
+      <p style="color: var(--muted); margin-top: 1.2rem; max-width: 480px;">
+        [ One line about your photography — subjects, style, approach. Wildlife, landscapes, street? ]
+      </p>
+    </section>
+
+    <!-- Category Filter -->
+    <section style="padding: 1.5rem 2.5rem; border-bottom: 1px solid var(--border); display: flex; gap: 1.5rem; flex-wrap: wrap;">
+      <span style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent); cursor:pointer;">All</span>
+      <span style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); cursor:pointer;">Wildlife</span>
+      <span style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); cursor:pointer;">Landscape</span>
+      <span style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); cursor:pointer;">Portrait</span>
+      <span style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); cursor:pointer;">Urban</span>
+    </section>
+
+    <!-- Photo Grid -->
+    <div class="photo-grid" style="animation: fadeUp 0.9s 0.1s ease both;">
+
+      <div class="photo-item">
+        <div class="photo-slot">[ Photo ]</div>
+        <div class="photo-caption"><span>Wildlife — [ Location ]</span></div>
+      </div>
+
+      <div class="photo-item">
+        <div class="photo-slot">[ Photo ]</div>
+        <div class="photo-caption"><span>Landscape — [ Location ]</span></div>
+      </div>
+
+      <div class="photo-item">
+        <div class="photo-slot">[ Photo ]</div>
+        <div class="photo-caption"><span>[ Category ] — [ Location ]</span></div>
+      </div>
+
+      <div class="photo-item">
+        <div class="photo-slot">[ Photo ]</div>
+        <div class="photo-caption"><span>[ Category ] — [ Location ]</span></div>
+      </div>
+
+      <div class="photo-item">
+        <div class="photo-slot">[ Photo ]</div>
+        <div class="photo-caption"><span>[ Category ] — [ Location ]</span></div>
+      </div>
+
+      <div class="photo-item">
+        <div class="photo-slot">[ Photo ]</div>
+        <div class="photo-caption"><span>[ Category ] — [ Location ]</span></div>
+      </div>
+
+      <div class="photo-item">
+        <div class="photo-slot">[ Photo ]</div>
+        <div class="photo-caption"><span>[ Category ] — [ Location ]</span></div>
+      </div>
+
+      <div class="photo-item">
+        <div class="photo-slot">[ Photo ]</div>
+        <div class="photo-caption"><span>[ Category ] — [ Location ]</span></div>
+      </div>
+
+      <div class="photo-item">
+        <div class="photo-slot">[ Photo ]</div>
+        <div class="photo-caption"><span>[ Category ] — [ Location ]</span></div>
+      </div>
+
+    </div>
+
+    <!-- Gear / Info -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">—</span>
+        <h2 class="section-title">Gear & Approach</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <p class="card-label">Camera</p>
+          <p class="card-body">[ Your camera body/bodies ]</p>
+        </div>
+        <div class="card">
+          <p class="card-label">Lenses</p>
+          <p class="card-body">[ Your go-to lenses ]</p>
+        </div>
+        <div class="card">
+          <p class="card-label">Post-Processing</p>
+          <p class="card-body">Adobe Lightroom · Photoshop<br>[ Any other tools or notes on your editing style ]</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>© 2025 Jason [ Last Name ]</span>
+    <a href="index.html">← Back to About</a>
+  </footer>
+
+</body>
+</html>
